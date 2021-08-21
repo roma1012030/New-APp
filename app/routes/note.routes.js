@@ -1,18 +1,18 @@
 module.exports = (app) => {
     const notes = require('../controllers/note.controller.js');
 
-    // Create a new Note
+    // Create a new CarAd
     app.post('/notes', notes.create);
 
-    // Retrieve all Notes
+    // Retrieve all CarAd
     app.get('/notes', notes.findAll);
 
-    // Retrieve a single Note with noteId
+    // Retrieve a single CarAd with CarAdId
     app.get('/notes/:noteId', notes.findOne);
 
-    // Update a Note with noteId
+    // Update a CarAd with CarAdID
     app.put('/notes/:noteId', notes.update);
 
-    // Delete a Note with noteId
+    // Delete a CarAd with CarAdId
     app.delete('/notes/:noteId', notes.delete);
 }
